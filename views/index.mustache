@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Robot Directory</title>
+  </head>
+  <body>
+
+  <ul>
+    <li><a href="http://localhost:3000/hire">For Hire</li>
+    <li><a href="http://localhost:3000/taken">Employed</li>
+    <li><a href="http://localhost:3000/">All Users</li>
+    </ul>
+
+<div class="container">
+  {{#data}}
+<div class="card" style="width: 20rem;">
+  <img class="card-img-top" src="{{avatar}}" alt="Card image cap">
+  <div class="card-body">
+    <a href='/{{id}}' > <h4 class="card-title">{{name}}</h4> </a>
+    <p class="card-text">
+      {{#company}}
+
+        <h5>{{company}}</h5>
+
+      {{/company}}
+
+      {{^company}}
+
+        <h5 class="hire">Available for hire!</h5>
+
+      {{/company}}</p>
+  </div>
+</div>
+{{/data}}
+</div>
+
+  </body>
+</html>

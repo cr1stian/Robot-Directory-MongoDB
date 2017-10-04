@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Bio</title>
+  </head>
+  <body>
+    <div class="bio-card">
+{{#data}}
+<div class="card" style="width: 20rem;">
+  <img id="pic" class="card-img-left" src="{{avatar}}" alt="Card image cap">
+   <div class="card-body">
+     <h1 class="card-title">{{name}}</h1>
+     <p class="card-text">{{job}} | {{company}}</p>
+     <p class="card-text">{{email}} | {{phone}}</p>
+     <p class="card-text"><b>Education:</b> {{university}}</p>
+     <p class="card-text"><b>Skills:</b> {{skills}}</p>
+   </div>
+ </div>
+
+{{/data}}
+    </div>
+  </body>
+</html>
